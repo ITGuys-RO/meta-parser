@@ -1,0 +1,11 @@
+{
+    "name": "itguys/meta-parser",
+    "authors": [
+        {
+            "name": "Catalin Teodorescu",
+            "email": "dustfeather@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
