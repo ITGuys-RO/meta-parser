@@ -8,7 +8,9 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "sunra/php-simple-html-dom-parser": "^1.5",
+        "sunra/php-simple-html-dom-parser": "^1.5"
+    },
+    "require-dev": {
         "symfony/var-dumper": "^3.0"
     }
 }
