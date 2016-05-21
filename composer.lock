@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d185b71059c24d4f19f7184a92d3799e",
-    "content-hash": "d7707cb6ffe637eafd868a778c2826a1",
+    "hash": "c716734834ed66b7ea4922181c7a8fca",
+    "content-hash": "aeed34f3143eff194062b34e4ca5bef4",
     "packages": [
         {
             "name": "sunra/php-simple-html-dom-parser",
@@ -49,7 +49,9 @@
                 "parser"
             ],
             "time": "2016-05-20 11:21:15"
-        },
+        }
+    ],
+    "packages-dev": [
         {
             "name": "symfony/polyfill-mbstring",
             "version": "dev-master",
@@ -173,7 +175,6 @@
             "time": "2016-05-13 18:13:23"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": [],
