@@ -66,12 +66,11 @@ if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== f
             <?php
             $words = weight_words($metaElements['content']);
             $nr = 0;
-            foreach ($words as $word => $count) {
-                if ($nr < 10) {
+            foreach ($words as $word => $count) { //iteram array-ul cu toate cuvintele
+                if ($nr < 10) { //ne oprim la al 10-lea
                     $percent = 0;
-                    $relevance = similar_text($word, $metaElements['content'], $percent);
-                    $nr++;
-//                    dump($percent);
+                    similar_text($word, $metaElements['content'], $percent); //se calculeaza relevanta cuvantului fata de tot textul
+                    $nr++; //se incrementeaza pentru a numara cate cuvinte am afisat pana acum
                     ?>
                     <tr>
                         <td><?php echo $word; ?></td>
