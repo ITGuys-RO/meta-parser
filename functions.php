@@ -75,7 +75,9 @@ function stats($tag, $content)
 function weight_words($content)
 {
     $decodedContent = html_entity_decode($content, ENT_HTML5);
-    $words = str_word_count($decodedContent, 2); //returneaza list de cuvinte din continut
+    $excluded = ['de', 'si', 'in', 'la', 'cu']; //exceptii de cuvinte pe care nu le vrem afisate
+    $filtered = str_ireplace($excluded, '', $decodedContent); //stergem cuvintele nedorite din continut
+    $words = str_word_count($filtered, 2); //returneaza list de cuvinte din continut
     $lowered = array_map('strtolower', $words); //elimina majusculele
     $weight = array_count_values($lowered); //calculeaza repetitia cuvintelor
     array_multisort($weight, SORT_NUMERIC, SORT_DESC); //sorteaza descendent
