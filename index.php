@@ -57,6 +57,32 @@ if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== f
             }
             ?>
         </table>
+        <table class="table table-responsive table-bordered table-condensed table-hover">
+            <tr>
+                <th>Word</th>
+                <th>Count</th>
+                <th>Weight</th>
+            </tr>
+            <?php
+            $words = weight_words($metaElements['content']);
+            $nr = 0;
+            foreach ($words as $word => $count) {
+                if ($nr < 10) {
+                    $percent = 0;
+                    $relevance = similar_text($word, $metaElements['content'], $percent);
+                    $nr++;
+//                    dump($percent);
+                    ?>
+                    <tr>
+                        <td><?php echo $word; ?></td>
+                        <td><?php echo $count; ?></td>
+                        <td><?php echo number_format($percent, 3).'%'; ?></td>
+                    </tr>
+                    <?php
+                }
+            }
+            ?>
+        </table>
     <?php } ?>
 </div>
 <!-- Latest compiled and minified JavaScript -->

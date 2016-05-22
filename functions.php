@@ -63,3 +63,13 @@ function stats($tag, $content)
 
     return nl2br($return);
 }
+
+function weight_words($content)
+{
+    $words = str_word_count($content, 2); //returneaza list de cuvinte din continut
+    $lowered = array_map('strtolower', $words); //elimina majusculele
+    $weight = array_count_values($lowered);
+    array_multisort($weight, SORT_NUMERIC, SORT_DESC);
+
+    return $weight;
+}
