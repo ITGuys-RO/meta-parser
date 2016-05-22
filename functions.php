@@ -54,7 +54,7 @@ function stats($tag, $content)
     $stats = [
         'wordCount' => str_word_count($tag),
         'charCount' => strlen($tag),
-        'relevance' => number_format($percent, 3),
+        'relevance' => number_format(($percent * 100), 3),
     ];
 
     $return = $stats['charCount']." chars".PHP_EOL;

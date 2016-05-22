@@ -75,7 +75,7 @@ if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== f
                     <tr>
                         <td><?php echo $word; ?></td>
                         <td><?php echo $count; ?></td>
-                        <td><?php echo number_format($percent, 3).'%'; ?></td>
+                        <td><?php echo number_format($percent * 100, 3).'%'; ?></td>
                     </tr>
                     <?php
                 }
