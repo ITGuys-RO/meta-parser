@@ -50,11 +50,11 @@ function parser($url)
 function stats($tag, $content)
 {
     $percent = 0;
-    $relevance = similar_text($tag, $content, $percent);
+    $matches = similar_text($tag, $content, $percent);
     $stats = [
         'wordCount' => str_word_count($tag),
         'charCount' => strlen($tag),
-        'relevance' => $relevance,
+        'relevance' => number_format($percent, 3),
     ];
 
     $return = $stats['charCount']." chars".PHP_EOL;
