@@ -5,6 +5,8 @@
 use Sunra\PhpSimple\HtmlDomParser;
 
 /**
+ * Acceseaza continutul si intoarce in format text elementele meta: title, description si keywords
+ *
  * @param string $url
  *
  * @return array
@@ -38,10 +40,12 @@ function parser($url)
 }
 
 /**
+ * Proceseaza textul si intoarce valorile statistice (cuvine, litere, relevanta)
+ *
  * @param string $tag
  * @param string $content
  *
- * @return array
+ * @return string
  */
 function stats($tag, $content)
 {
