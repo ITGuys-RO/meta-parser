@@ -84,3 +84,10 @@ function weight_words($content)
 
     return $weight;
 }
+
+function density($wordCount, $totalWords)
+{
+    $density = ($wordCount / $totalWords) * 100;
+
+    return $density;
+}

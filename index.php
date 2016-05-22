@@ -70,12 +70,13 @@ if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== f
 //                if ($nr < 10) { //ne oprim la al 10-lea
                 $percent = 0;
                 similar_text($word, $metaElements['content'], $percent); //se calculeaza relevanta cuvantului fata de tot textul
+                $density = density($count, count($words));
                 $nr++; //se incrementeaza pentru a numara cate cuvinte am afisat pana acum
                 ?>
                 <tr>
                     <td><?php echo $word; ?></td>
                     <td><?php echo $count; ?></td>
-                    <td><?php echo number_format($percent * 100, 3).'%'; ?></td>
+                    <td><?php echo number_format($density, 3).'%'; ?></td>
                 </tr>
                 <?php
 //                }
