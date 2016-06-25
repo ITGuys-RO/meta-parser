@@ -3,10 +3,10 @@
  * Created by Catalin Teodorescu on 22-May-16 00:26.
  */
 require_once __DIR__.'/vendor/autoload.php';
-require_once __DIR__.'/functions.php';
+require_once __DIR__.'/Utils.php';
 
 if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== false)) {
-    $metaElements = parser($_GET['url']);
+    $metaElements = Utils::parser($_GET['url']);
 } else {
     dump('Please provide a valid URL');
 }
@@ -59,7 +59,7 @@ if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== f
                         </td>
                         <td>
                             <?php if (!empty($value)) {
-                                $stats = stats($value, $metaElements['content']);
+                                $stats = Utils::stats($value, $metaElements['content']);
                                 echo $stats;
                             } ?>
                         </td>
@@ -81,12 +81,12 @@ if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== f
                 <th>Weight</th>
             </tr>
             <?php
-            $words = weight_words($metaElements['content']);
+            $words = Utils::weight_words($metaElements['content']);
             $nr = 0;
             foreach ($words as $word => $count) {
                 $percent = 0;
                 similar_text($word, $metaElements['content'], $percent);
-                $density = density($count, count($words));
+                $density = Utils::density($count, count($words));
                 $nr++;
                 ?>
                 <tr>
