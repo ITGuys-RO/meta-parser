@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "dff51f72b0706335131b00a7f49606168c582594"
+                "reference": "f9bc5072e11b2ad15ea55e0f4171cc870dc33a1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dff51f72b0706335131b00a7f49606168c582594",
-                "reference": "dff51f72b0706335131b00a7f49606168c582594",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f9bc5072e11b2ad15ea55e0f4171cc870dc33a1d",
+                "reference": "f9bc5072e11b2ad15ea55e0f4171cc870dc33a1d",
                 "shasum": ""
             },
             "require": {
@@ -109,7 +109,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-05-18 14:26:46"
+            "time": "2016-06-07 08:38:42"
         },
         {
             "name": "symfony/var-dumper",
@@ -117,12 +117,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "b5ad0aeeba7cfe1fad3f3c944eaa344c2280a821"
+                "reference": "511371711de41320613fbea0d16e8580dc628949"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/b5ad0aeeba7cfe1fad3f3c944eaa344c2280a821",
-                "reference": "b5ad0aeeba7cfe1fad3f3c944eaa344c2280a821",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/511371711de41320613fbea0d16e8580dc628949",
+                "reference": "511371711de41320613fbea0d16e8580dc628949",
                 "shasum": ""
             },
             "require": {
@@ -172,7 +172,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2016-05-13 18:13:23"
+            "time": "2016-06-23 09:26:38"
         }
     ],
     "aliases": [],
