@@ -1,12 +1,10 @@
 {
     "name": "itguys/meta-parser",
     "license": "GPLv3",
-    "authors": [
-        {
-            "name": "Catalin Teodorescu",
-            "email": "dustfeather@gmail.com"
-        }
-    ],
+    "authors": {
+        "name": "Catalin Teodorescu",
+        "email": "dustfeather@gmail.com"
+    },
     "minimum-stability": "dev",
     "require": {
         "sunra/php-simple-html-dom-parser": "^1.5"
