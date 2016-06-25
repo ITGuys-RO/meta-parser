@@ -1,6 +1,7 @@
 {
     "name": "itguys/meta-parser",
     "license": "GPL-3.0",
+    "description": "Word statistics on any public URL",
     "authors": [
         {
             "name": "Catalin Teodorescu",

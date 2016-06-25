@@ -81,7 +81,7 @@ if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== f
                 <th>Weight</th>
             </tr>
             <?php
-            $words = Utils::weight_words($metaElements['content']);
+            $words = Utils::weightWords($metaElements['content']);
             $nr = 0;
             foreach ($words as $word => $count) {
                 $percent = 0;

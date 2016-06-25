@@ -74,7 +74,7 @@ class Utils
      *
      * @return array
      */
-    public static function weight_words($content)
+    public static function weightWords($content)
     {
         $decodedContent = html_entity_decode($content, ENT_HTML5);
         $excluded = ['de', 'si', 'in', 'la', 'cu'];
