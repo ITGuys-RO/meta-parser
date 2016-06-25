@@ -50,7 +50,7 @@ function parser($url)
 function stats($tag, $content)
 {
     $percent = 0;
-    $matches = similar_text($tag, $content, $percent);
+    similar_text($tag, $content, $percent);
     $stats = [
         'wordCount' => str_word_count($tag),
         'charCount' => strlen($tag),
