@@ -50,7 +50,7 @@ if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== f
             </tr>
             <?php
             foreach ($metaElements as $key => $value) {
-                if ($key != 'content') { //nu generam un rand nou in tabel pentru content-ul paginii
+                if ($key != 'content') {
                     ?>
                     <tr class="<?php echo empty($value) ? 'danger' : ''; ?>">
                         <td>
@@ -83,12 +83,11 @@ if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== f
             <?php
             $words = weight_words($metaElements['content']);
             $nr = 0;
-            foreach ($words as $word => $count) { //iteram array-ul cu toate cuvintele
-//                if ($nr < 10) { //ne oprim la al 10-lea
+            foreach ($words as $word => $count) {
                 $percent = 0;
-                similar_text($word, $metaElements['content'], $percent); //se calculeaza relevanta cuvantului fata de tot textul
+                similar_text($word, $metaElements['content'], $percent);
                 $density = density($count, count($words));
-                $nr++; //se incrementeaza pentru a numara cate cuvinte am afisat pana acum
+                $nr++;
                 ?>
                 <tr>
                     <td><?php echo $word; ?></td>
@@ -103,4 +102,4 @@ if (!empty($_GET['url']) && (filter_var($_GET['url'], FILTER_VALIDATE_URL) !== f
     <?php } ?>
 </div>
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

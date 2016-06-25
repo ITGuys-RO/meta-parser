@@ -13,7 +13,7 @@ use Sunra\PhpSimple\HtmlDomParser;
  */
 function parser($url)
 {
-    $dom = HtmlDomParser::file_get_html($url); //acceseaza pagina
+    $dom = HtmlDomParser::file_get_html($url);
     $content = trim($dom->plaintext);
     $metaElements = [
         'title'       => '',
@@ -21,7 +21,7 @@ function parser($url)
         'keywords'    => '',
         'content'     => $content,
     ];
-    if (!empty($content)) { //verifica faptul ca exista content
+    if (!empty($content)) {
         $title = $dom->find('title');
         $description = $dom->find('meta[name=description]');
         $keywords = $dom->find('meta[name=keywords]');
@@ -75,12 +75,12 @@ function stats($tag, $content)
 function weight_words($content)
 {
     $decodedContent = html_entity_decode($content, ENT_HTML5);
-    $excluded = ['de', 'si', 'in', 'la', 'cu']; //exceptii de cuvinte pe care nu le vrem afisate
-    $filtered = str_ireplace($excluded, '', $decodedContent); //stergem cuvintele nedorite din continut
-    $words = str_word_count($filtered, 2); //returneaza list de cuvinte din continut
-    $lowered = array_map('strtolower', $words); //elimina majusculele
-    $weight = array_count_values($lowered); //calculeaza repetitia cuvintelor
-    array_multisort($weight, SORT_NUMERIC, SORT_DESC); //sorteaza descendent
+    $excluded = ['de', 'si', 'in', 'la', 'cu'];
+    $filtered = str_ireplace($excluded, '', $decodedContent);
+    $words = str_word_count($filtered, 2);
+    $lowered = array_map('strtolower', $words);
+    $weight = array_count_values($lowered);
+    array_multisort($weight, SORT_NUMERIC, SORT_DESC);
 
     return $weight;
 }
