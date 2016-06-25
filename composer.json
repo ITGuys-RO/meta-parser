@@ -1,5 +1,6 @@
 {
     "name": "itguys/meta-parser",
+    "license": "MIT",
     "authors": [
         {
             "name": "Catalin Teodorescu",
