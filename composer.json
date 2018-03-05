@@ -1,6 +1,6 @@
 {
     "name": "itguys/meta-parser",
-    "license": "GPL-3.0",
+    "license": "GPL-3.0-or-later",
     "description": "Word statistics on any public URL",
     "authors": [
         {
